@@ -10,7 +10,6 @@ const texts = [
     "Find",
     "Hidden",
     "Gems",
-    
 ];
 
 const morphTime = 1;

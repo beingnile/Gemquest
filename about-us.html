@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>newwave</title>
+    <title>GemQuest: Find Hidden Gems - About Us</title>
+    <meta name="description" content="Learn more about GemQuest, a service business based in Kenya that helps youth discover and save hidden gems like restaurants, sports facilities, and parks.">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/featured.css">
     <link rel="stylesheet" href="styles/general.css">
@@ -13,146 +14,92 @@
     <link rel="stylesheet" href="styles/about-us.css">
     <link rel="stylesheet" href="styles/modal.css">
     <script src="https://kit.fontawesome.com/31d9c192ce.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body>
-    <section id="header">
+    <header id="header">
         <div class="header">
-            <a href="#" class="logo">GemQuest: Find Hidden Gems</a>
-            <input type="text" class="search-bar" placeholder="Search for Gems...">
-
-            <button class="search-button">
+            <a href="#" class="logo" aria-label="GemQuest Logo"></a>
+            <input type="text" class="search-bar" placeholder="Search for Gems..." aria-label="Search for Gems">
+            <button class="search-button" aria-label="Search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-
-            <button class="new-gem" id="open-bucketlist-btn">
+            <button class="new-gem" id="open-bucketlist-btn" aria-haspopup="dialog" aria-controls="bucketlist-modal" aria-expanded="false">
                 <i class="fa-solid fa-pen-to-square"></i>
                 <div class="tooltip">New Gem</div>
             </button>
-            <div id="bucketlist-modal" class="modal">
+            <div id="bucketlist-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
                 <div class="modal-content">
-                  <h2 class="modal-title">Add to Your Bucket List</h2>
-                  <form id="bucketlist-form">
-                    <label for="item">Bucket List Item:</label>
-                    <input type="text" id="item" name="item" placeholder="Enter your New Gem">
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" placeholder="Enter the location (city, park, etc.)">
-                    <label for="budget">Estimated Budget:</label>
-                    <input type="number" id="budget" name="budget" placeholder="Enter estimated budget (optional)">
-                    <button type="submit">Add Gem</button>
-                  </form>
-                  <button id="close-modal-btn" class="close-btn">&times;</button>
+                    <h2 class="modal-title" id="modal-title">Add to Your Bucket List</h2>
+                    <form id="bucketlist-form">
+                        <label for="item">Bucket List Item:</label>
+                        <input type="text" id="item" name="item" placeholder="Enter your New Gem">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" placeholder="Enter the location (city, park, etc.)">
+                        <label for="budget">Estimated Budget:</label>
+                        <input type="number" id="budget" name="budget" placeholder="Enter estimated budget (optional)">
+                        <button type="submit">Add Gem</button>
+                    </form>
+                    <button id="close-modal-btn" class="close-btn" aria-label="Close">&times;</button>
                 </div>
             </div>
-            <script src="modal.js"></script>
-
-            <button class="menu-button">
+            <script src="modal.js" defer></script>
+            <button class="menu-button" aria-label="Open Menu">
                 <span class="menu-icon"></span>
             </button>
             <nav class="navigation">
                 <ul>
                     <li><a href="index.html#home">Home</a></li>
                     <li><a href="index.html#featured">Featured</a></li>
-                    <li><a href="index.html#bucketlist">BucketList</a></li>
+                    <li><a href="index.html#bucketlist">Bucket List</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                 </ul>
             </nav>
         </div>
-    </section>
+    </header>
 
-    <nav class="sidebar">
-        <div class="sidebar-link">
-            <i class="fa-solid fa-house"></i>
-            <div>Home</div>
-        </div>
-        <div class="sidebar-link">
-            <i class="fa-solid fa-bucket"></i>
-            <div>BucketList</div>
-        </div>
-        <div class="sidebar-link">
-            <i class="fa-solid fa-gem"></i>
-            <div>Featured</div>
-        </div>
-        <div class="sidebar-link">
-            <i class="fa-solid fa-route"></i>
-            <div>Maps</div>
-        </div>
-        <div class="profile">
-            <i class="fa-solid fa-user"></i>
-            <div>Profile</div>
-        </div>
-    </nav>
-
-    <section id="about-us">
+    <main id="about-us">
         <div class="about-us">
             <h1 class="mid-header">About Us</h1>
-
-            <p>GemQuest: Find Hidden Gems is a service business based in Kenya. Our mission is to help youth discover
-                and save hidden gems, such as restaurants, sports facilities, and parks, on social media platforms. We
-                aim to provide a platform that consolidates these saved locations into one place, making it easy for
-                users to keep track of their experiences and share them with others.</p>
-
-            <p>Our vision is to create a community of explorers who are passionate about discovering unique and exciting
-                places. We want to inspire young people to step out of their comfort zones and explore the hidden gems
-                that Kenya has to offer.</p>
-
-            <p>At GemQuest, our goal is to provide a user-friendly website that offers various features to enhance the
-                experience of our users. These features include a Maps integration, allowing users to easily locate and
-                navigate to their saved gems. We also integrate with Uber and social media apps, enabling users to
-                seamlessly plan their visits and share their experiences with friends and followers.</p>
-
-            <p>In addition, we offer a Bucket List feature that allows users to create a list of places they want to
-                visit and track their progress. Our platform also provides information on amenities available at each
-                location, such as parking, Wi-Fi, and accessibility options.</p>
-
-            <p>To ensure the reliability of our recommendations, we incorporate social features, such as user reviews
-                and star ratings. This allows users to make informed decisions when selecting which gems to explore. We
-                also provide estimated budgets for each location, helping users plan their visits accordingly.</p>
-
-            <p>Lastly, we offer a convenient sign-up feature that allows users to create personalized accounts, enabling
-                them to save their favorite gems, interact with other users, and receive personalized recommendations
-                based on their preferences. Our AirBnBs side navigation panel provides easy access to accommodation
-                options near each gem, making it convenient for users to plan their trips.</p>
-
-            <p>At GemQuest: Find Hidden Gems, we are dedicated to helping young people uncover the hidden treasures of
-                Kenya and create lasting memories.</p>
-
-            <script src="script.js"></script>
-    </section>
+            <p>GemQuest: Find Hidden Gems is a service business based in Kenya. Our mission is to help youth discover and save hidden gems, such as restaurants, sports facilities, and parks, on social media platforms. We aim to provide a platform that consolidates these saved locations into one place, making it easy for users to keep track of their experiences and share them with others.</p>
+            <p>Our vision is to create a community of explorers who are passionate about discovering unique and exciting places. We want to inspire young people to step out of their comfort zones and explore the hidden gems that Kenya has to offer.</p>
+            <p>At GemQuest, our goal is to provide a user-friendly website that offers various features to enhance the experience of our users. These features include a Maps integration, allowing users to easily locate and navigate to their saved gems. We also integrate with Uber and social media apps, enabling users to seamlessly plan their visits and share their experiences with friends and followers.</p>
+            <p>In addition, we offer a Bucket List feature that allows users to create a list of places they want to visit and track their progress. Our platform also provides information on amenities available at each location, such as parking, Wi-Fi, and accessibility options.</p>
+            <p>To ensure the reliability of our recommendations, we incorporate social features, such as user reviews and star ratings. This allows users to make informed decisions when selecting which gems to explore. We also provide estimated budgets for each location, helping users plan their visits accordingly.</p>
+            <p>Lastly, we offer a convenient sign-up feature that allows users to create personalized accounts, enabling them to save their favorite gems, interact with other users, and receive personalized recommendations based on their preferences. Our AirBnBs side navigation panel provides easy access to accommodation options near each gem, making it convenient for users to plan their trips.</p>
+            <p>At GemQuest: Find Hidden Gems, we are dedicated to helping young people uncover the hidden treasures of Kenya and create lasting memories.</p>
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-content">
                 <h2 class="footer-logo">GemQuest: Find Hidden Gems</h2>
-                <p> Kenya</p>
+                <p>Kenya</p>
             </div>
-
             <div class="socialmedia-section">
                 <div class="footer-content">
-                    <p class="footer-description">Follow us On</p>
+                    <p class="footer-description">Follow us on</p>
                 </div>
                 <div class="social-links">
-                  <a href="https://www.facebook.com/" target="_blank" class="social-link">
-                    <i class="fa-brands fa-square-facebook"></i> </a>
-                  <a href="https://www.instagram.com/" target="_blank" class="social-link">
-                    <i class="fa fa-instagram"></i> </a>
-                  <a href="https://twitter.com/" target="_blank" class="social-link">
-                    <i class="fa-brands fa-x-twitter"></i> </a> 
+                    <a href="https://www.facebook.com/" target="_blank" class="social-link" aria-label="Facebook">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="social-link" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
                 </div>
             </div>
-            
         </div>
-
-        <div class="spacer">
-        </div>
-
+        <div class="spacer"></div>
         <div class="copyright">
             <p>&copy; 2024 GemQuest: Find Hidden Gems. All rights reserved.</p>
         </div>
-    
     </footer>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
